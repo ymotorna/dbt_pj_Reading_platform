@@ -17,7 +17,7 @@ reading_platform/
 │   ├── payments.csv
 │   ├── reading_sessions.csv
 │   ├── reviews.csv
-│   └── seeds.yml                 # Column types + tests for all seed tables
+│   └── seeds.yml                 # Column types
 │
 ├── models/
 │   ├── raw/                      # Views directly on top of seeds — no logic
@@ -28,7 +28,7 @@ reading_platform/
 │   │   ├── raw_payments.sql
 │   │   ├── raw_reading_sessions.sql
 │   │   ├── raw_reviews.sql
-│   │   └── raw.yml
+│   │   └── raw.yml               # Add data_tests for values
 │   │
 │   ├── staging/                  # Clean, renamed, typed, surrogate-keyed models
 │   │   ├── stg_authors.sql
@@ -73,7 +73,7 @@ seeds (CSV files)
             └── stg_* (staging — clean, typed, surrogate keys added)
                     │
                     ├── dim_authors          (table)
-                    ├── dim_books            (table) ◄── dim_authors
+                    ├── dim_books            (table) 
                     ├── dim_users            (table)
                     ├── dim_date             (table, generated)
                     │
