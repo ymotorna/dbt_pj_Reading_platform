@@ -1,0 +1,270 @@
+# add data_tests for vals:
+  # primary key uniqueness
+  # not null constraints
+  # accepted values
+  # relationships between tables
+
+version: 2
+
+models:
+
+    - name: raw_authors
+      columns:
+        - name: author_id
+          data_tests:
+            - unique
+            - not_null
+        - name: name
+          data_tests:
+            - not_null
+        - name: nationality
+          data_tests:
+            - not_null
+            - accepted_values:
+                values: [ "American","British","French","Japanese","German","Spanish","Brazilian","Canadian","Australian","Italian" ]
+        - name: birth_year
+          data_tests:
+            - not_null
+        - name: bio_snippet
+
+    - name: raw_books
+      columns:
+        - name: book_id
+          data_tests:
+            - unique
+            - not_null
+        - name: author_id
+          data_tests:
+            - not_null
+            - relationships:
+                to: ref('raw_authors')
+                field: author_id
+        - name: title
+          data_tests:
+            - not_null
+        - name: genre
+          data_tests:
+            - not_null
+            - accepted_values:
+                values: [ "Fiction","Mystery","Sci-Fi","Romance","Thriller","Fantasy","Biography","Self-Help","History","Horror" ]
+        - name: language
+          data_tests:
+            - not_null
+            - accepted_values:
+                values: [ "English","Spanish","French","German","Japanese","Portuguese","Italian" ]
+        - name: published_date
+          data_tests:
+            - not_null
+        - name: page_count
+          data_tests:
+            - not_null
+        - name: added_to_platform_at
+          data_tests:
+            - not_null
+        - name: is_available
+          data_tests:
+            - not_null
+            - accepted_values:
+                values: [ true, false ]
+
+    - name: raw_users
+      columns:
+        - name: user_id
+          data_tests:
+            - unique
+            - not_null
+        - name: email
+          data_tests:
+            - unique
+            - not_null
+        - name: username
+          data_tests:
+            - unique
+            - not_null
+        - name: country
+          data_tests:
+            - not_null
+            - accepted_values:
+                values: [ "US","GB","DE","FR","JP","BR","CA","AU","IT","ES","MX","IN","PL","NL","SE" ]
+        - name: signup_at
+          data_tests:
+            - not_null
+        - name: birth_year
+          data_tests:
+            - not_null
+        - name: preferred_genres
+          data_tests:
+            - not_null
+        - name: device_type
+          data_tests:
+            - not_null
+            - accepted_values:
+                values: [ "mobile","desktop","tablet","e-reader" ]
+        - name: is_active
+          data_tests:
+            - not_null
+            - accepted_values:
+                values: [ true, false ]
+        - name: deleted_at
+
+    - name: raw_subscriptions
+      columns:
+        - name: subscription_id
+          data_tests:
+            - unique
+            - not_null
+        - name: user_id
+          data_tests:
+            - not_null
+            - relationships:
+                to: ref('raw_users')
+                field: user_id
+        - name: plan_type
+          data_tests:
+            - not_null
+            - accepted_values:
+                values: [ "free","basic","premium" ]
+        - name: started_at
+          data_tests:
+            - not_null
+        - name: ended_at
+          data_tests:
+            - not_null
+        - name: price
+          data_tests:
+            - not_null
+            - accepted_values:
+                values: [ 0.00, 9.99, 19.99 ]
+        - name: payment_method
+          data_tests:
+            - accepted_values:
+                values: [ "credit_card","paypal","bank_transfer","apple_pay","google_pay","" ]
+        - name: renewal_type
+          data_tests:
+            - not_null
+            - accepted_values:
+                values: [ "auto","manual" ]
+        - name: is_active
+          data_tests:
+            - not_null
+            - accepted_values:
+                values: [ true, false ]
+        - name: cancel_reason
+          data_tests:
+            - accepted_values:
+                values: [ "too_expensive","not_enough_content","switching_service","technical_issues","" ]
+
+    - name: raw_payments
+      columns:
+        - name: payment_id
+          data_tests:
+            - unique
+            - not_null
+        - name: subscription_id
+          data_tests:
+            - not_null
+            - relationships:
+                to: ref('raw_subscriptions')
+                field: subscription_id
+        - name: user_id
+          data_tests:
+            - not_null
+            - relationships:
+                to: ref('raw_users')
+                field: user_id
+        - name: paid_at
+          data_tests:
+            - not_null
+        - name: amount
+          data_tests:
+            - not_null
+        - name: currency
+          data_tests:
+            - not_null
+            - accepted_values:
+                values: [ "USD" ]
+        - name: payment_method
+          data_tests:
+            - not_null
+            - accepted_values:
+                values: [ "credit_card","paypal","bank_transfer","apple_pay","google_pay" ]
+        - name: status
+          data_tests:
+            - not_null
+            - accepted_values:
+                values: [ "success","failed","refunded" ]
+        - name: billing_period_start
+          data_tests:
+            - not_null
+        - name: billing_period_end
+          data_tests:
+            - not_null
+
+    - name: raw_reading_sessions
+      columns:
+        - name: session_id
+          data_tests:
+            - unique
+            - not_null
+        - name: user_id
+          data_tests:
+            - not_null
+            - relationships:
+                to: ref('raw_users')
+                field: user_id
+        - name: book_id
+          data_tests:
+            - not_null
+            - relationships:
+                to: ref('raw_books')
+                field: book_id
+        - name: started_at
+          data_tests:
+            - not_null
+        - name: ended_at
+          data_tests:
+            - not_null
+        - name: pages_read
+          data_tests:
+            - not_null
+        - name: device_type
+          data_tests:
+            - not_null
+            - accepted_values:
+                values: [ "mobile","desktop","tablet","e-reader" ]
+        - name: completion_pct
+          data_tests:
+            - not_null
+
+    - name: raw_reviews
+      columns:
+        - name: review_id
+          data_tests:
+            - unique
+            - not_null
+        - name: user_id
+          data_tests:
+            - not_null
+            - relationships:
+                to: ref('raw_users')
+                field: user_id
+        - name: book_id
+          data_tests:
+            - not_null
+            - relationships:
+                to: ref('raw_books')
+                field: book_id
+        - name: rating
+          data_tests:
+            - not_null
+            - accepted_values:
+                values: [ 1, 2, 3, 4, 5 ]
+        - name: review_text
+        - name: created_at
+          data_tests:
+            - not_null
+        - name: is_verified_reader
+          data_tests:
+            - not_null
+            - accepted_values:
+                values: [ true, false ]
