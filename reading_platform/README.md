@@ -293,3 +293,11 @@ Revenue peaked in December 2024 and declined through 2025–2026, dropping back 
 - **U0090 and U0148 (both GB)** read the most pages in this group (1,413 and 1,493) yet completed nothing — suggesting they read broadly across long books without finishing.
 - **Geographic spread** across 9 different countries confirms no single market dominates the high-value segment. International retention strategy applies broadly.
 - **Actionable signal:** High-spend / zero-completion users are the highest churn risk. A re-engagement campaign targeting this cohort (personalised recommendations, reading streak nudges, completion milestones) could reduce churn without new user acquisition spend.
+
+---
+
+## Sources & References
+
+| Topic                              | Link                                                                      |
+|------------------------------------|---------------------------------------------------------------------------|
+| Generate data + promts during work | [Chat link](https://claude.ai/share/1e8490a7-53f2-426a-a98e-b1104cb5e445) |
