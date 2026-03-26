@@ -9,12 +9,12 @@
 with sessions as (
 
     select
-        book_id,
+        book_sk,
         started_at::date as session_date,
         session_id,
-        user_id,
+        user_sk,
         pages_read
-    from{{ ref('stg_reading_sessions') }}
+    from{{ ref('fct_reading_sessions') }}
 
     {% if is_incremental() %}
         where started_at::date > (select max(session_date) from {{ this }})
@@ -23,14 +23,14 @@ with sessions as (
 
 final as (
     select
-        {{ dbt_utils.generate_surrogate_key(['book_id', 'session_date']) }} as book_dstat_sk,
-        book_id,
+        {{ dbt_utils.generate_surrogate_key(['book_sk', 'session_date']) }} as book_dstat_sk,
+        book_sk,
         session_date,
         count(session_id) as total_sessions,
-        count(distinct user_id) as unique_readers,
+        count(distinct user_sk) as unique_readers,
         sum(pages_read) as total_pages_read
     from sessions
-    group by book_id, session_date
+    group by book_sk, session_date
 )
 
 select * from final

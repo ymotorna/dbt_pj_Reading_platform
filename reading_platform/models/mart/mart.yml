@@ -34,7 +34,8 @@ models:
         data_tests:
           - not_null
           - accepted_values:
-              values: ["American","British","French","Japanese","German","Spanish","Brazilian","Canadian","Australian","Italian"]
+              values: ["American","British","French","Japanese","German","Spanish",
+                       "Brazilian","Canadian","Australian","Italian"]
 
       - name: birth_year
         description: Four-digit birth year of the author.
@@ -54,10 +55,9 @@ models:
 
   - name: dim_books
     description: >
-      One row per book. Enriched with the author's name and nationality from
-      dim_authors, plus aggregated engagement and review metrics from reading
-      sessions and reviews. Also includes genre-level window benchmarks.
-      Serves as the book dimension and book performance mart.
+      One row per book. Base dimension containing all book catalogue attributes
+      enriched with the author's name and nationality joined from stg_authors.
+      No engagement or review metrics — those live in book_performance.
     config:
       materialized: table
     columns:
@@ -92,7 +92,8 @@ models:
         data_tests:
           - not_null
           - accepted_values:
-              values: ["Fiction","Mystery","Sci-Fi","Romance","Thriller","Fantasy","Biography","Self-Help","History","Horror"]
+              values: ["Fiction","Mystery","Sci-Fi","Romance","Thriller",
+                       "Fantasy","Biography","Self-Help","History","Horror"]
 
       - name: language
         description: Language the book is written in.
@@ -133,56 +134,12 @@ models:
         data_tests:
           - not_null
 
-      - name: total_readers
-        description: Count of distinct users who opened this book in at least one session.
-        data_tests:
-          - not_null
-
-      - name: total_sessions
-        description: Total number of reading sessions logged for this book across all users.
-        data_tests:
-          - not_null
-
-      - name: avg_completion_pct
-        description: Average completion percentage across all sessions for this book.
-
-      - name: completion_rate
-        description: >
-          Share of readers who finished the book (completion_pct = 100), expressed
-          as a ratio between 0 and 1. NULL when the book has no sessions.
-
-      - name: avg_pages_per_session
-        description: Average number of pages read per individual session.
-
-      - name: total_reviews
-        description: Total number of reviews submitted for this book.
-        data_tests:
-          - not_null
-
-      - name: avg_rating
-        description: Mean star rating (1–5) across all reviews. NULL if no reviews.
-
-      - name: verified_review_rate
-        description: >
-          Percentage (0–100) of reviews submitted by verified readers.
-          NULL if the book has no reviews.
-
-      - name: genre_avg_rating
-        description: >
-          Window function result — average rating across all books in the same genre.
-          Useful for benchmarking a book against its genre peers.
-
-      - name: genre_avg_completion_rate
-        description: >
-          Window function result — average completion rate across all books in the
-          same genre. Useful for identifying outlier engagement within a genre.
-
 
   - name: dim_users
     description: >
-      One row per user. Combines all staging user profile attributes with
-      lifetime engagement, review, and revenue metrics. Window-function
-      derived rank columns allow direct comparison across the user base.
+      One row per user. Base dimension containing all staging user profile
+      attributes with no computed metrics. Serves as the user dimension in
+      the star schema. Engagement and revenue metrics live in user_stats.
     config:
       materialized: table
     columns:
@@ -248,89 +205,6 @@ models:
 
       - name: deleted_at
         description: Date of soft deletion. NULL for active accounts.
-
-      - name: total_sessions
-        description: Lifetime count of reading sessions. 0 for users with no sessions.
-        data_tests:
-          - not_null
-
-      - name: total_pages_read
-        description: Lifetime sum of pages read across all sessions.
-        data_tests:
-          - not_null
-
-      - name: avg_session_duration_min
-        description: >
-          Average duration in minutes per reading session, calculated as
-          avg(datediff minutes between started_at and ended_at).
-          NULL for users with no sessions.
-
-      - name: avg_completion_pct
-        description: Average book completion percentage across all sessions.
-
-      - name: books_started
-        description: Count of distinct books the user has opened at least once.
-        data_tests:
-          - not_null
-
-      - name: books_completed
-        description: >
-          Count of distinct books where the user reached 100% completion.
-        data_tests:
-          - not_null
-
-      - name: days_since_last_session
-        description: >
-          Days elapsed between the user's most recent session and current date.
-          Key signal for churn detection. NULL for users with no sessions.
-
-      - name: total_reviews
-        description: Total number of reviews submitted by the user.
-        data_tests:
-          - not_null
-
-      - name: avg_rating_given
-        description: >
-          The user's personal average star rating across all reviews submitted.
-          Indicates whether the user is a harsh or generous rater. NULL if no reviews.
-
-      - name: lifetime_payments
-        description: >
-          Sum of all successful payment amounts made by the user across all
-          subscriptions. 0 for free-tier only users.
-        data_tests:
-          - not_null
-
-      - name: tenure_as_paying_user
-        description: >
-          Days between the user's first and most recent successful payment.
-          NULL for users who have never made a payment.
-
-      - name: total_failed_payments
-        description: Count of failed payment attempts across all subscriptions.
-        data_tests:
-          - not_null
-
-      - name: pages_read_rank
-        description: >
-          Dense rank of the user by total_pages_read descending.
-          Rank 1 = most pages read on the platform.
-        data_tests:
-          - not_null
-
-      - name: books_completed_rank
-        description: >
-          Dense rank of the user by books_completed descending.
-          Rank 1 = most books finished on the platform.
-        data_tests:
-          - not_null
-
-      - name: revenue_rank
-        description: >
-          Dense rank of the user by lifetime_payments descending.
-          Rank 1 = highest spending user on the platform.
-        data_tests:
-          - not_null
 
 
   - name: dim_date
@@ -445,9 +319,7 @@ models:
           - not_null
 
       - name: session_duration_min
-        description: >
-          Duration of the session in minutes, derived as
-          datediff(minutes, started_at, ended_at).
+        description: Duration of the session in minutes, derived as datediff(minutes, started_at, ended_at).
         data_tests:
           - not_null
 
@@ -545,9 +417,8 @@ models:
     columns:
       - name: transaction_sk
         description: >
-          Surrogate key for the transaction, hashed from the combination of
-          subscription_id and payment_id. Uniquely identifies one payment
-          event within a subscription.
+          Surrogate key hashed from the combination of subscription_id and payment_id.
+          Uniquely identifies one payment event within a subscription.
         data_tests:
           - unique
           - not_null
@@ -558,9 +429,7 @@ models:
           - not_null
 
       - name: payment_id
-        description: >
-          Natural key of the individual payment record. NULL for free-plan
-          subscriptions that generated no payment rows.
+        description: Natural key of the payment record. NULL for free-plan rows.
 
       - name: user_sk
         description: Surrogate foreign key referencing dim_users.user_sk.
@@ -626,7 +495,8 @@ models:
         description: Self-reported cancellation reason. Empty string for active or free subs.
         data_tests:
           - accepted_values:
-              values: ["too_expensive","not_enough_content","switching_service","technical_issues",""]
+              values: ["too_expensive","not_enough_content","switching_service",
+                       "technical_issues",""]
 
       - name: payment_status
         description: >
@@ -650,7 +520,7 @@ models:
         description: Payment instrument used. NULL for free-tier rows.
         data_tests:
           - accepted_values:
-              values: ["credit_card","paypal","bank_transfer","apple_pay","google_pay", null]
+              values: ["credit_card","paypal","bank_transfer","apple_pay","google_pay",null]
 
       - name: billing_period_start
         description: First day of the billing cycle this payment covers. NULL for free-tier.
@@ -659,21 +529,307 @@ models:
         description: Last day of the billing cycle this payment covers. NULL for free-tier.
 
 
+  # ── MART WIDE TABLES ───────────────────────────────────────────────────────
+
+  - name: book_performance
+    description: >
+      One row per book. Built on top of dim_books, enriched with aggregated
+      engagement metrics from fct_reading_sessions and review metrics from
+      fct_reviews. Also includes genre-level window benchmarks for relative
+      performance comparison. Primary analytical table for book-level reporting.
+    config:
+      materialized: table
+    columns:
+      - name: book_sk
+        description: Surrogate key carried from dim_books.
+        data_tests:
+          - unique
+          - not_null
+
+      - name: book_id
+        description: Natural key from the source system.
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_books')
+                field: book_id
+
+      - name: author_id
+        description: Natural foreign key referencing dim_authors.author_id.
+        data_tests:
+          - not_null
+
+      - name: title
+        description: Full title of the book.
+        data_tests:
+          - not_null
+
+      - name: genre
+        description: Primary genre classification.
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: ["Fiction","Mystery","Sci-Fi","Romance","Thriller",
+                       "Fantasy","Biography","Self-Help","History","Horror"]
+
+      - name: language
+        description: Language the book is written in.
+        data_tests:
+          - not_null
+
+      - name: published_date
+        description: Original publication date of the book.
+        data_tests:
+          - not_null
+
+      - name: page_count
+        description: Total number of pages in the platform edition.
+        data_tests:
+          - not_null
+
+      - name: added_to_platform_at
+        description: Date the book was added to the platform catalogue.
+        data_tests:
+          - not_null
+
+      - name: is_available
+        description: Whether the book is currently accessible to readers.
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: author_name
+        description: Denormalised author name carried from dim_books.
+        data_tests:
+          - not_null
+
+      - name: author_nationality
+        description: Denormalised author nationality carried from dim_books.
+        data_tests:
+          - not_null
+
+      - name: total_readers
+        description: Count of distinct users who opened this book in at least one session.
+        data_tests:
+          - not_null
+
+      - name: total_sessions
+        description: Total number of reading sessions logged for this book.
+        data_tests:
+          - not_null
+
+      - name: avg_completion_pct
+        description: Average completion percentage across all sessions for this book.
+
+      - name: completion_rate
+        description: >
+          Share of readers who reached 100% completion, expressed as a ratio
+          between 0 and 1. NULL when the book has no sessions.
+
+      - name: avg_pages_per_session
+        description: Average number of pages read per individual session.
+
+      - name: total_reviews
+        description: Total number of reviews submitted for this book.
+        data_tests:
+          - not_null
+
+      - name: avg_rating
+        description: Mean star rating (1–5) across all reviews. NULL if no reviews.
+
+      - name: verified_review_rate
+        description: >
+          Percentage (0–100) of reviews from verified readers.
+          NULL if the book has no reviews.
+
+      - name: genre_avg_rating
+        description: >
+          Window function — average rating across all books in the same genre.
+          Used to benchmark this book against its genre peers.
+
+      - name: genre_avg_completion_rate
+        description: >
+          Window function — average completion rate across all books in the same genre.
+          Used to identify engagement outliers within a genre.
+
+
+  - name: user_stats
+    description: >
+      One row per user. Built on top of dim_users, enriched with lifetime
+      engagement metrics from fct_reading_sessions, review behaviour from
+      fct_reviews, and revenue data from fct_transactions. Window-function
+      rank columns allow direct cross-user comparison. Primary analytical
+      table for user-level reporting and segmentation.
+    config:
+      materialized: table
+    columns:
+      - name: user_sk
+        description: Surrogate key carried from dim_users.
+        data_tests:
+          - unique
+          - not_null
+
+      - name: user_id
+        description: Natural key from the source system.
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_users')
+                field: user_id
+
+      - name: email
+        description: User's registered email address.
+        data_tests:
+          - unique
+          - not_null
+
+      - name: username
+        description: Public-facing display name.
+        data_tests:
+          - unique
+          - not_null
+
+      - name: country
+        description: Two-letter ISO country code of the user's registered location.
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: ["US","GB","DE","FR","JP","BR","CA","AU","IT","ES","MX","IN","PL","NL","SE"]
+
+      - name: signup_at
+        description: Date the user completed account registration.
+        data_tests:
+          - not_null
+
+      - name: birth_year
+        description: Four-digit birth year for demographic segmentation.
+        data_tests:
+          - not_null
+
+      - name: preferred_genres
+        description: Pipe-delimited list of genres selected during onboarding.
+        data_tests:
+          - not_null
+
+      - name: device_type
+        description: Primary device the user reads on.
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: ["mobile","desktop","tablet","e-reader"]
+
+      - name: is_active
+        description: False when the account has been soft-deleted or suspended.
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: deleted_at
+        description: Date of soft deletion. NULL for active accounts.
+
+      - name: total_sessions
+        description: Lifetime count of reading sessions. 0 for users with no sessions.
+        data_tests:
+          - not_null
+
+      - name: total_pages_read
+        description: Lifetime sum of pages read across all sessions.
+        data_tests:
+          - not_null
+
+      - name: avg_session_duration_min
+        description: >
+          Average session duration in minutes across all sessions.
+          NULL for users with no sessions.
+
+      - name: avg_completion_pct
+        description: Average book completion percentage across all sessions.
+
+      - name: books_started
+        description: Count of distinct books the user has opened at least once.
+        data_tests:
+          - not_null
+
+      - name: books_completed
+        description: Count of distinct books where the user reached 100% completion.
+        data_tests:
+          - not_null
+
+      - name: days_since_last_session
+        description: >
+          Days elapsed between the user's most recent session and current date.
+          Key churn signal. NULL for users with no sessions.
+
+      - name: total_reviews
+        description: Total number of reviews submitted by the user.
+        data_tests:
+          - not_null
+
+      - name: avg_rating_given
+        description: >
+          The user's personal average star rating. Indicates harsh vs generous
+          rater tendency. NULL if no reviews submitted.
+
+      - name: lifetime_payments
+        description: >
+          Sum of all payment amounts across all subscriptions.
+          0 for free-tier only users.
+        data_tests:
+          - not_null
+
+      - name: tenure_as_paying_user
+        description: >
+          Days between the user's first and most recent payment.
+          NULL for users who have never made a payment.
+
+      - name: total_failed_payments
+        description: Count of failed payment attempts across all subscriptions.
+        data_tests:
+          - not_null
+
+      - name: pages_read_rank
+        description: >
+          Dense rank by total_pages_read descending across all users.
+          Rank 1 = most pages read on the platform.
+        data_tests:
+          - not_null
+
+      - name: books_completed_rank
+        description: >
+          Dense rank by books_completed descending across all users.
+          Rank 1 = most books finished on the platform.
+        data_tests:
+          - not_null
+
+      - name: revenue_rank
+        description: >
+          Dense rank by lifetime_payments descending across all users.
+          Rank 1 = highest spending user on the platform.
+        data_tests:
+          - not_null
+
+
   # ── AGGREGATES ─────────────────────────────────────────────────────────────
 
   - name: daily_book_stats
     description: >
       Grain: one row per book per calendar day. Tracks daily reading activity
       per book — session count, unique readers, and total pages read.
-      Materialized as incremental, keyed on book_dstat_sk. Useful for time-series
-      analysis of book engagement trends.
+      Pulled from fct_reading_sessions. Materialized as incremental,
+      keyed on book_dstat_sk.
     config:
       materialized: incremental
     columns:
       - name: book_dstat_sk
         description: >
           Surrogate key hashed from the combination of book_id and session_date.
-          Uniquely identifies one book's activity on one day.
+          Uniquely identifies one book's activity on one calendar day.
         data_tests:
           - unique
           - not_null
@@ -711,16 +867,16 @@ models:
   - name: daily_user_stats
     description: >
       Grain: one row per user per calendar day. Tracks daily reading activity
-      per user — session count, pages read, and total time spent reading.
-      Materialized as incremental with a 30-day predicate to limit scan range.
-      Useful for DAU analysis and individual reading habit tracking.
+      per user — session count, pages read, and total minutes spent reading.
+      Pulled from fct_reading_sessions. Materialized as incremental with a
+      30-day predicate to limit scan range, keyed on user_dstat_sk.
     config:
       materialized: incremental
     columns:
       - name: user_dstat_sk
         description: >
           Surrogate key hashed from the combination of user_id and session_date.
-          Uniquely identifies one user's activity on one day.
+          Uniquely identifies one user's activity on one calendar day.
         data_tests:
           - unique
           - not_null
@@ -745,13 +901,13 @@ models:
           - not_null
 
       - name: total_pages_read
-        description: Sum of pages read by the user across all sessions on this date.
+        description: Sum of pages read by the user on this date.
         data_tests:
           - not_null
 
       - name: total_min_spent
         description: >
           Total minutes spent reading on this date, summed across all sessions.
-          Derived as sum of datediff(minutes, started_at, ended_at).
+          Derived from session_duration_min carried from fct_reading_sessions.
         data_tests:
           - not_null

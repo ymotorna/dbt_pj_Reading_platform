@@ -10,12 +10,12 @@
 with sessions as (
 
     select
-        user_id,
+        user_sk,
         started_at::date as session_date,
         session_id,
         pages_read,
-        datediff('minute', started_at, ended_at) as session_duration_min
-    from{{ ref('stg_reading_sessions') }}
+        session_duration_min
+    from{{ ref('fct_reading_sessions') }}
 
     {% if is_incremental() %}
         where started_at::date > (select max(session_date) from {{ this }})
@@ -24,14 +24,14 @@ with sessions as (
 
 final as (
     select
-        {{ dbt_utils.generate_surrogate_key(['user_id', 'session_date']) }} as user_dstat_sk,
-        user_id,
+        {{ dbt_utils.generate_surrogate_key(['user_sk', 'session_date']) }} as user_dstat_sk,
+        user_sk,
         session_date,
         count(session_id) as total_sessions,
         sum(pages_read) as total_pages_read,
         sum(session_duration_min) as total_min_spent
     from sessions
-    group by user_id, session_date
+    group by user_sk, session_date
 )
 
 select * from final
