@@ -1,0 +1,301 @@
+review_id,user_id,book_id,rating,review_text,created_at,is_verified_reader
+R00001,U0116,B0007,2,Decent story but nothing groundbreaking.,2022-02-14 00:00:00,True
+R00002,U0096,B0054,3,"Absolutely loved this book, could not put it down.",2021-10-19 00:00:00,True
+R00003,U0002,B0007,5,The writing style is beautiful but the plot drags.,2024-02-13 00:00:00,True
+R00004,U0077,B0078,4,Highly recommend to anyone who enjoys this genre.,2020-12-24 00:00:00,False
+R00005,U0100,B0043,2,,2022-02-14 00:00:00,True
+R00006,U0148,B0017,4,,2022-04-10 00:00:00,True
+R00007,U0158,B0068,4,,2023-10-22 00:00:00,True
+R00008,U0157,B0050,5,One of the best books I have read this year.,2020-11-26 00:00:00,True
+R00009,U0162,B0016,4,,2020-08-24 00:00:00,False
+R00010,U0054,B0058,2,The characters felt real and relatable.,2020-12-20 00:00:00,True
+R00011,U0083,B0061,3,,2024-09-06 00:00:00,True
+R00012,U0036,B0025,4,Highly recommend to anyone who enjoys this genre.,2022-10-05 00:00:00,False
+R00013,U0150,B0045,4,,2022-06-20 00:00:00,True
+R00014,U0118,B0009,4,The characters felt real and relatable.,2023-02-14 00:00:00,False
+R00015,U0046,B0077,5,One of the best books I have read this year.,2021-12-14 00:00:00,True
+R00016,U0151,B0008,5,The writing style is beautiful but the plot drags.,2024-11-13 00:00:00,False
+R00017,U0108,B0064,4,The characters felt real and relatable.,2024-04-03 00:00:00,False
+R00018,U0046,B0057,4,The characters felt real and relatable.,2024-08-16 00:00:00,False
+R00019,U0109,B0078,3,"Absolutely loved this book, could not put it down.",2021-12-09 00:00:00,True
+R00020,U0060,B0076,1,,2024-04-27 00:00:00,True
+R00021,U0135,B0068,3,The writing style is beautiful but the plot drags.,2021-11-13 00:00:00,True
+R00022,U0074,B0071,3,"Absolutely loved this book, could not put it down.",2021-01-30 00:00:00,True
+R00023,U0080,B0006,3,Highly recommend to anyone who enjoys this genre.,2024-01-01 00:00:00,False
+R00024,U0075,B0007,5,The writing style is beautiful but the plot drags.,2024-01-07 00:00:00,True
+R00025,U0002,B0045,4,Decent story but nothing groundbreaking.,2023-12-18 00:00:00,True
+R00026,U0188,B0071,5,A masterpiece of modern literature.,2021-11-23 00:00:00,False
+R00027,U0081,B0042,4,"Absolutely loved this book, could not put it down.",2020-09-26 00:00:00,False
+R00028,U0061,B0036,3,"Absolutely loved this book, could not put it down.",2021-05-28 00:00:00,True
+R00029,U0157,B0014,5,A masterpiece of modern literature.,2024-06-19 00:00:00,False
+R00030,U0071,B0078,3,Not my cup of tea but well written.,2023-07-04 00:00:00,True
+R00031,U0074,B0027,4,,2023-09-05 00:00:00,True
+R00032,U0121,B0030,5,Decent story but nothing groundbreaking.,2024-07-04 00:00:00,True
+R00033,U0129,B0012,3,One of the best books I have read this year.,2023-03-13 00:00:00,False
+R00034,U0050,B0025,4,,2023-08-11 00:00:00,True
+R00035,U0078,B0003,3,One of the best books I have read this year.,2022-02-26 00:00:00,False
+R00036,U0183,B0078,2,An engaging read but the ending felt rushed.,2021-06-20 00:00:00,True
+R00037,U0123,B0052,5,One of the best books I have read this year.,2020-12-23 00:00:00,False
+R00038,U0005,B0078,4,"Absolutely loved this book, could not put it down.",2020-12-22 00:00:00,True
+R00039,U0005,B0006,3,An engaging read but the ending felt rushed.,2021-02-26 00:00:00,True
+R00040,U0168,B0077,5,"Absolutely loved this book, could not put it down.",2020-06-28 00:00:00,False
+R00041,U0031,B0070,5,,2024-07-17 00:00:00,True
+R00042,U0039,B0062,4,Not my cup of tea but well written.,2024-09-03 00:00:00,False
+R00043,U0084,B0043,3,"Absolutely loved this book, could not put it down.",2023-02-06 00:00:00,True
+R00044,U0074,B0070,1,"Absolutely loved this book, could not put it down.",2021-02-08 00:00:00,True
+R00045,U0081,B0014,5,A masterpiece of modern literature.,2023-04-14 00:00:00,True
+R00046,U0062,B0004,4,One of the best books I have read this year.,2021-09-08 00:00:00,True
+R00047,U0079,B0029,4,,2024-04-02 00:00:00,False
+R00048,U0032,B0063,5,The writing style is beautiful but the plot drags.,2021-05-14 00:00:00,True
+R00049,U0078,B0046,4,An engaging read but the ending felt rushed.,2020-11-04 00:00:00,True
+R00050,U0024,B0006,3,A masterpiece of modern literature.,2023-10-22 00:00:00,True
+R00051,U0161,B0024,4,,2024-03-23 00:00:00,False
+R00052,U0167,B0037,5,Highly recommend to anyone who enjoys this genre.,2022-05-15 00:00:00,False
+R00053,U0177,B0048,5,,2021-11-26 00:00:00,False
+R00054,U0002,B0020,4,Decent story but nothing groundbreaking.,2024-10-10 00:00:00,True
+R00055,U0121,B0062,2,Struggled to finish this one.,2024-12-25 00:00:00,True
+R00056,U0194,B0036,2,One of the best books I have read this year.,2021-03-24 00:00:00,True
+R00057,U0105,B0046,4,Not my cup of tea but well written.,2022-03-16 00:00:00,False
+R00058,U0112,B0078,4,One of the best books I have read this year.,2024-11-12 00:00:00,False
+R00059,U0175,B0032,4,Not my cup of tea but well written.,2022-07-25 00:00:00,True
+R00060,U0133,B0069,5,A masterpiece of modern literature.,2023-06-04 00:00:00,True
+R00061,U0191,B0054,4,,2023-05-16 00:00:00,False
+R00062,U0061,B0012,4,The writing style is beautiful but the plot drags.,2021-09-25 00:00:00,False
+R00063,U0006,B0047,4,One of the best books I have read this year.,2023-07-19 00:00:00,False
+R00064,U0017,B0045,5,,2022-06-10 00:00:00,False
+R00065,U0081,B0059,5,The characters felt real and relatable.,2021-03-23 00:00:00,False
+R00066,U0114,B0032,5,"Absolutely loved this book, could not put it down.",2021-08-06 00:00:00,False
+R00067,U0034,B0019,5,,2022-07-14 00:00:00,False
+R00068,U0102,B0007,2,Struggled to finish this one.,2024-05-07 00:00:00,True
+R00069,U0160,B0021,3,One of the best books I have read this year.,2020-08-01 00:00:00,True
+R00070,U0022,B0002,5,A masterpiece of modern literature.,2023-08-10 00:00:00,True
+R00071,U0051,B0061,3,The characters felt real and relatable.,2024-08-01 00:00:00,False
+R00072,U0082,B0061,5,Not my cup of tea but well written.,2022-09-21 00:00:00,False
+R00073,U0185,B0002,2,"Absolutely loved this book, could not put it down.",2022-01-09 00:00:00,False
+R00074,U0010,B0078,3,One of the best books I have read this year.,2024-08-17 00:00:00,True
+R00075,U0115,B0059,5,Highly recommend to anyone who enjoys this genre.,2023-07-10 00:00:00,False
+R00076,U0135,B0040,3,One of the best books I have read this year.,2024-05-23 00:00:00,True
+R00077,U0026,B0067,5,One of the best books I have read this year.,2022-07-14 00:00:00,False
+R00078,U0109,B0080,3,One of the best books I have read this year.,2020-09-23 00:00:00,False
+R00079,U0150,B0078,2,,2025-02-18 00:00:00,True
+R00080,U0086,B0052,4,"Absolutely loved this book, could not put it down.",2025-01-20 00:00:00,False
+R00081,U0173,B0055,3,An engaging read but the ending felt rushed.,2021-07-04 00:00:00,True
+R00082,U0162,B0043,3,One of the best books I have read this year.,2020-07-28 00:00:00,True
+R00083,U0018,B0028,1,Highly recommend to anyone who enjoys this genre.,2023-10-06 00:00:00,True
+R00084,U0056,B0005,3,Struggled to finish this one.,2021-10-06 00:00:00,True
+R00085,U0151,B0062,1,An engaging read but the ending felt rushed.,2020-09-02 00:00:00,False
+R00086,U0004,B0046,3,A masterpiece of modern literature.,2024-08-18 00:00:00,True
+R00087,U0086,B0051,4,One of the best books I have read this year.,2024-06-26 00:00:00,False
+R00088,U0027,B0043,5,The characters felt real and relatable.,2022-09-13 00:00:00,True
+R00089,U0042,B0004,5,Not my cup of tea but well written.,2023-09-16 00:00:00,True
+R00090,U0011,B0038,3,Not my cup of tea but well written.,2021-04-27 00:00:00,True
+R00091,U0168,B0012,3,The writing style is beautiful but the plot drags.,2024-06-11 00:00:00,False
+R00092,U0175,B0019,5,The characters felt real and relatable.,2024-09-22 00:00:00,True
+R00093,U0194,B0078,4,,2024-01-26 00:00:00,True
+R00094,U0037,B0044,4,A masterpiece of modern literature.,2022-01-17 00:00:00,True
+R00095,U0190,B0050,3,Struggled to finish this one.,2021-10-03 00:00:00,True
+R00096,U0043,B0073,5,An engaging read but the ending felt rushed.,2023-12-08 00:00:00,False
+R00097,U0040,B0040,5,,2023-06-26 00:00:00,False
+R00098,U0025,B0064,4,One of the best books I have read this year.,2020-12-10 00:00:00,False
+R00099,U0045,B0009,4,Decent story but nothing groundbreaking.,2021-12-26 00:00:00,True
+R00100,U0050,B0059,5,Highly recommend to anyone who enjoys this genre.,2021-11-11 00:00:00,False
+R00101,U0120,B0018,5,Not my cup of tea but well written.,2021-02-09 00:00:00,True
+R00102,U0079,B0052,5,,2022-09-16 00:00:00,True
+R00103,U0100,B0066,4,Decent story but nothing groundbreaking.,2025-02-25 00:00:00,True
+R00104,U0182,B0053,4,,2023-04-03 00:00:00,True
+R00105,U0172,B0008,5,,2024-07-27 00:00:00,False
+R00106,U0004,B0020,2,A masterpiece of modern literature.,2025-03-14 00:00:00,True
+R00107,U0109,B0010,4,Not my cup of tea but well written.,2021-08-31 00:00:00,False
+R00108,U0096,B0060,4,Not my cup of tea but well written.,2023-01-16 00:00:00,True
+R00109,U0051,B0014,5,The writing style is beautiful but the plot drags.,2022-08-22 00:00:00,True
+R00110,U0018,B0041,5,Not my cup of tea but well written.,2022-05-03 00:00:00,True
+R00111,U0198,B0061,3,"Absolutely loved this book, could not put it down.",2021-01-21 00:00:00,True
+R00112,U0127,B0019,3,Struggled to finish this one.,2024-01-03 00:00:00,True
+R00113,U0161,B0049,5,Decent story but nothing groundbreaking.,2020-10-06 00:00:00,False
+R00114,U0128,B0028,3,"Absolutely loved this book, could not put it down.",2020-09-19 00:00:00,False
+R00115,U0183,B0055,3,One of the best books I have read this year.,2021-12-05 00:00:00,True
+R00116,U0019,B0036,2,,2022-09-08 00:00:00,True
+R00117,U0114,B0068,4,Highly recommend to anyone who enjoys this genre.,2021-08-13 00:00:00,True
+R00118,U0015,B0012,4,,2022-10-26 00:00:00,True
+R00119,U0055,B0045,4,The characters felt real and relatable.,2022-10-07 00:00:00,False
+R00120,U0045,B0056,5,Struggled to finish this one.,2022-05-28 00:00:00,True
+R00121,U0004,B0072,5,The writing style is beautiful but the plot drags.,2024-10-21 00:00:00,True
+R00122,U0178,B0075,3,,2023-11-15 00:00:00,False
+R00123,U0195,B0041,3,Not my cup of tea but well written.,2020-06-30 00:00:00,False
+R00124,U0134,B0041,5,,2021-01-19 00:00:00,True
+R00125,U0140,B0001,5,One of the best books I have read this year.,2022-12-10 00:00:00,True
+R00126,U0171,B0075,1,,2020-12-17 00:00:00,False
+R00127,U0114,B0070,3,A masterpiece of modern literature.,2024-10-03 00:00:00,True
+R00128,U0058,B0025,4,"Absolutely loved this book, could not put it down.",2024-03-23 00:00:00,True
+R00129,U0100,B0003,5,The characters felt real and relatable.,2022-02-09 00:00:00,False
+R00130,U0035,B0064,5,A masterpiece of modern literature.,2024-01-20 00:00:00,True
+R00131,U0097,B0070,4,,2022-10-21 00:00:00,True
+R00132,U0116,B0048,4,One of the best books I have read this year.,2021-05-29 00:00:00,True
+R00133,U0104,B0037,4,,2025-02-25 00:00:00,True
+R00134,U0078,B0080,2,An engaging read but the ending felt rushed.,2025-03-22 00:00:00,False
+R00135,U0030,B0012,1,A masterpiece of modern literature.,2024-01-22 00:00:00,True
+R00136,U0167,B0070,4,The characters felt real and relatable.,2020-12-22 00:00:00,True
+R00137,U0010,B0038,4,The writing style is beautiful but the plot drags.,2025-03-11 00:00:00,False
+R00138,U0148,B0049,3,Not my cup of tea but well written.,2021-01-21 00:00:00,False
+R00139,U0112,B0051,5,,2020-06-16 00:00:00,True
+R00140,U0078,B0035,3,,2024-02-09 00:00:00,False
+R00141,U0180,B0031,5,A masterpiece of modern literature.,2020-06-09 00:00:00,True
+R00142,U0008,B0020,4,The characters felt real and relatable.,2024-11-05 00:00:00,False
+R00143,U0161,B0041,3,Struggled to finish this one.,2022-04-18 00:00:00,False
+R00144,U0066,B0072,3,,2022-08-11 00:00:00,True
+R00145,U0015,B0074,2,,2022-10-27 00:00:00,True
+R00146,U0194,B0023,5,The characters felt real and relatable.,2022-09-04 00:00:00,True
+R00147,U0064,B0013,5,The characters felt real and relatable.,2024-05-25 00:00:00,True
+R00148,U0155,B0051,5,Highly recommend to anyone who enjoys this genre.,2025-02-21 00:00:00,False
+R00149,U0044,B0042,2,"Absolutely loved this book, could not put it down.",2021-07-23 00:00:00,True
+R00150,U0168,B0076,1,,2021-04-10 00:00:00,True
+R00151,U0023,B0074,1,,2022-07-24 00:00:00,True
+R00152,U0123,B0046,3,The writing style is beautiful but the plot drags.,2021-06-18 00:00:00,True
+R00153,U0144,B0032,5,,2024-06-27 00:00:00,True
+R00154,U0072,B0007,2,One of the best books I have read this year.,2021-12-16 00:00:00,True
+R00155,U0030,B0015,5,An engaging read but the ending felt rushed.,2022-12-28 00:00:00,True
+R00156,U0078,B0034,2,Not my cup of tea but well written.,2021-06-05 00:00:00,False
+R00157,U0058,B0051,4,"Absolutely loved this book, could not put it down.",2020-12-24 00:00:00,True
+R00158,U0131,B0010,5,A masterpiece of modern literature.,2021-08-05 00:00:00,False
+R00159,U0170,B0058,3,Highly recommend to anyone who enjoys this genre.,2024-12-12 00:00:00,True
+R00160,U0050,B0073,4,"Absolutely loved this book, could not put it down.",2023-12-15 00:00:00,True
+R00161,U0093,B0045,5,Struggled to finish this one.,2023-02-17 00:00:00,True
+R00162,U0044,B0067,3,An engaging read but the ending felt rushed.,2024-07-28 00:00:00,True
+R00163,U0009,B0069,4,,2020-07-18 00:00:00,True
+R00164,U0100,B0015,1,One of the best books I have read this year.,2021-08-19 00:00:00,True
+R00165,U0194,B0017,3,The writing style is beautiful but the plot drags.,2021-12-01 00:00:00,False
+R00166,U0096,B0071,3,,2024-01-27 00:00:00,False
+R00167,U0118,B0066,5,Highly recommend to anyone who enjoys this genre.,2022-08-29 00:00:00,True
+R00168,U0183,B0036,2,,2022-08-14 00:00:00,False
+R00169,U0085,B0022,3,,2024-11-13 00:00:00,True
+R00170,U0121,B0055,5,Decent story but nothing groundbreaking.,2023-10-05 00:00:00,True
+R00171,U0163,B0050,3,Decent story but nothing groundbreaking.,2022-10-28 00:00:00,True
+R00172,U0169,B0009,3,"Absolutely loved this book, could not put it down.",2022-12-08 00:00:00,False
+R00173,U0069,B0076,3,,2022-09-18 00:00:00,False
+R00174,U0142,B0046,1,One of the best books I have read this year.,2022-08-25 00:00:00,False
+R00175,U0116,B0024,3,The writing style is beautiful but the plot drags.,2022-06-03 00:00:00,False
+R00176,U0102,B0019,3,"Absolutely loved this book, could not put it down.",2024-10-14 00:00:00,True
+R00177,U0004,B0043,4,,2021-08-12 00:00:00,True
+R00178,U0064,B0072,4,Struggled to finish this one.,2020-10-14 00:00:00,True
+R00179,U0060,B0014,3,Struggled to finish this one.,2023-07-24 00:00:00,False
+R00180,U0179,B0010,5,A masterpiece of modern literature.,2023-08-20 00:00:00,False
+R00181,U0118,B0041,3,The writing style is beautiful but the plot drags.,2024-12-22 00:00:00,True
+R00182,U0133,B0064,5,A masterpiece of modern literature.,2020-09-04 00:00:00,True
+R00183,U0122,B0022,3,A masterpiece of modern literature.,2023-10-15 00:00:00,True
+R00184,U0007,B0037,4,Struggled to finish this one.,2020-07-07 00:00:00,False
+R00185,U0125,B0037,5,A masterpiece of modern literature.,2021-02-24 00:00:00,True
+R00186,U0143,B0068,4,"Absolutely loved this book, could not put it down.",2020-08-20 00:00:00,True
+R00187,U0027,B0054,3,Decent story but nothing groundbreaking.,2024-06-21 00:00:00,False
+R00188,U0109,B0011,5,Not my cup of tea but well written.,2023-07-15 00:00:00,True
+R00189,U0107,B0039,5,Not my cup of tea but well written.,2024-04-27 00:00:00,False
+R00190,U0035,B0048,2,The writing style is beautiful but the plot drags.,2023-11-18 00:00:00,True
+R00191,U0004,B0018,5,,2021-01-02 00:00:00,False
+R00192,U0062,B0022,3,,2020-11-28 00:00:00,True
+R00193,U0144,B0001,5,Highly recommend to anyone who enjoys this genre.,2024-04-10 00:00:00,False
+R00194,U0013,B0015,5,An engaging read but the ending felt rushed.,2020-09-07 00:00:00,True
+R00195,U0184,B0079,5,Highly recommend to anyone who enjoys this genre.,2024-11-08 00:00:00,False
+R00196,U0039,B0075,2,Decent story but nothing groundbreaking.,2022-12-31 00:00:00,False
+R00197,U0157,B0053,4,An engaging read but the ending felt rushed.,2023-12-27 00:00:00,True
+R00198,U0066,B0074,4,Highly recommend to anyone who enjoys this genre.,2023-02-04 00:00:00,True
+R00199,U0195,B0062,2,,2021-09-06 00:00:00,True
+R00200,U0024,B0046,5,The writing style is beautiful but the plot drags.,2023-07-19 00:00:00,False
+R00201,U0196,B0027,2,Not my cup of tea but well written.,2024-04-24 00:00:00,True
+R00202,U0005,B0028,5,The writing style is beautiful but the plot drags.,2023-01-15 00:00:00,True
+R00203,U0093,B0027,4,The characters felt real and relatable.,2024-12-24 00:00:00,True
+R00204,U0086,B0040,4,One of the best books I have read this year.,2024-05-22 00:00:00,False
+R00205,U0031,B0017,5,A masterpiece of modern literature.,2021-08-23 00:00:00,False
+R00206,U0166,B0066,5,The writing style is beautiful but the plot drags.,2021-07-21 00:00:00,True
+R00207,U0115,B0022,3,Struggled to finish this one.,2024-04-06 00:00:00,True
+R00208,U0041,B0060,2,An engaging read but the ending felt rushed.,2025-04-30 00:00:00,True
+R00209,U0124,B0024,1,,2021-11-29 00:00:00,True
+R00210,U0097,B0034,5,An engaging read but the ending felt rushed.,2021-01-29 00:00:00,True
+R00211,U0059,B0020,4,The characters felt real and relatable.,2022-08-22 00:00:00,True
+R00212,U0119,B0035,2,,2022-06-28 00:00:00,True
+R00213,U0115,B0025,3,One of the best books I have read this year.,2022-01-24 00:00:00,True
+R00214,U0142,B0078,4,An engaging read but the ending felt rushed.,2023-03-08 00:00:00,False
+R00215,U0173,B0032,3,"Absolutely loved this book, could not put it down.",2021-01-14 00:00:00,False
+R00216,U0155,B0035,2,An engaging read but the ending felt rushed.,2021-10-02 00:00:00,True
+R00217,U0166,B0052,4,The writing style is beautiful but the plot drags.,2022-08-12 00:00:00,False
+R00218,U0185,B0035,3,,2023-03-12 00:00:00,True
+R00219,U0171,B0037,4,,2024-05-16 00:00:00,True
+R00220,U0052,B0065,4,,2024-05-05 00:00:00,True
+R00221,U0184,B0031,3,An engaging read but the ending felt rushed.,2021-05-15 00:00:00,True
+R00222,U0091,B0059,5,,2021-03-18 00:00:00,True
+R00223,U0091,B0003,5,An engaging read but the ending felt rushed.,2021-05-30 00:00:00,True
+R00224,U0004,B0077,5,Struggled to finish this one.,2022-05-23 00:00:00,True
+R00225,U0068,B0061,1,"Absolutely loved this book, could not put it down.",2021-01-11 00:00:00,True
+R00226,U0080,B0030,4,,2023-05-12 00:00:00,True
+R00227,U0027,B0013,5,Decent story but nothing groundbreaking.,2022-02-14 00:00:00,True
+R00228,U0196,B0045,3,Not my cup of tea but well written.,2023-06-23 00:00:00,True
+R00229,U0124,B0002,4,,2025-01-21 00:00:00,True
+R00230,U0139,B0077,2,,2023-02-17 00:00:00,True
+R00231,U0171,B0003,5,The writing style is beautiful but the plot drags.,2021-03-30 00:00:00,False
+R00232,U0040,B0046,1,Struggled to finish this one.,2023-03-17 00:00:00,False
+R00233,U0117,B0047,5,The writing style is beautiful but the plot drags.,2021-07-28 00:00:00,False
+R00234,U0103,B0014,5,,2021-12-13 00:00:00,True
+R00235,U0122,B0068,3,,2021-05-25 00:00:00,True
+R00236,U0090,B0051,4,Highly recommend to anyone who enjoys this genre.,2023-09-20 00:00:00,True
+R00237,U0012,B0075,5,Struggled to finish this one.,2023-05-02 00:00:00,True
+R00238,U0123,B0073,5,Highly recommend to anyone who enjoys this genre.,2024-11-10 00:00:00,True
+R00239,U0004,B0064,3,,2024-04-04 00:00:00,True
+R00240,U0080,B0080,4,Highly recommend to anyone who enjoys this genre.,2023-07-19 00:00:00,True
+R00241,U0018,B0038,4,The writing style is beautiful but the plot drags.,2020-07-02 00:00:00,True
+R00242,U0159,B0016,4,"Absolutely loved this book, could not put it down.",2020-09-17 00:00:00,True
+R00243,U0177,B0001,3,Decent story but nothing groundbreaking.,2020-09-11 00:00:00,False
+R00244,U0135,B0072,5,,2021-04-14 00:00:00,True
+R00245,U0195,B0026,4,An engaging read but the ending felt rushed.,2022-11-02 00:00:00,True
+R00246,U0010,B0061,3,,2022-05-28 00:00:00,True
+R00247,U0115,B0052,5,Highly recommend to anyone who enjoys this genre.,2020-12-18 00:00:00,True
+R00248,U0049,B0073,4,Decent story but nothing groundbreaking.,2022-11-10 00:00:00,False
+R00249,U0039,B0026,3,The characters felt real and relatable.,2021-10-26 00:00:00,True
+R00250,U0084,B0011,4,,2022-01-30 00:00:00,True
+R00251,U0051,B0049,5,A masterpiece of modern literature.,2024-10-20 00:00:00,True
+R00252,U0141,B0057,3,,2024-04-22 00:00:00,False
+R00253,U0126,B0046,4,A masterpiece of modern literature.,2022-10-24 00:00:00,True
+R00254,U0150,B0004,4,,2024-09-18 00:00:00,True
+R00255,U0083,B0032,4,One of the best books I have read this year.,2023-09-02 00:00:00,True
+R00256,U0151,B0038,5,A masterpiece of modern literature.,2020-09-18 00:00:00,True
+R00257,U0179,B0001,5,The characters felt real and relatable.,2023-01-04 00:00:00,True
+R00258,U0015,B0011,3,,2020-09-21 00:00:00,True
+R00259,U0160,B0013,3,Not my cup of tea but well written.,2025-01-09 00:00:00,False
+R00260,U0017,B0016,4,The characters felt real and relatable.,2024-07-26 00:00:00,False
+R00261,U0015,B0027,3,,2023-04-24 00:00:00,False
+R00262,U0038,B0029,4,One of the best books I have read this year.,2024-03-15 00:00:00,True
+R00263,U0085,B0001,4,,2024-12-06 00:00:00,True
+R00264,U0019,B0001,4,An engaging read but the ending felt rushed.,2021-04-10 00:00:00,True
+R00265,U0068,B0027,4,The characters felt real and relatable.,2020-12-30 00:00:00,True
+R00266,U0016,B0016,4,One of the best books I have read this year.,2022-02-05 00:00:00,False
+R00267,U0146,B0034,4,Not my cup of tea but well written.,2025-01-08 00:00:00,False
+R00268,U0165,B0016,3,"Absolutely loved this book, could not put it down.",2022-11-03 00:00:00,True
+R00269,U0200,B0031,4,,2021-05-16 00:00:00,True
+R00270,U0128,B0062,3,An engaging read but the ending felt rushed.,2022-01-15 00:00:00,False
+R00271,U0133,B0048,3,A masterpiece of modern literature.,2024-02-28 00:00:00,False
+R00272,U0031,B0060,5,One of the best books I have read this year.,2022-10-02 00:00:00,True
+R00273,U0124,B0016,4,Struggled to finish this one.,2023-07-31 00:00:00,True
+R00274,U0173,B0080,1,Decent story but nothing groundbreaking.,2022-11-28 00:00:00,False
+R00275,U0126,B0059,1,One of the best books I have read this year.,2021-12-20 00:00:00,True
+R00276,U0135,B0027,5,The characters felt real and relatable.,2022-05-16 00:00:00,True
+R00277,U0018,B0023,3,,2024-02-04 00:00:00,False
+R00278,U0092,B0059,5,One of the best books I have read this year.,2024-06-04 00:00:00,True
+R00279,U0176,B0039,2,,2022-08-16 00:00:00,True
+R00280,U0127,B0078,3,,2024-02-10 00:00:00,False
+R00281,U0176,B0068,2,Decent story but nothing groundbreaking.,2021-11-13 00:00:00,True
+R00282,U0156,B0045,4,A masterpiece of modern literature.,2023-09-11 00:00:00,True
+R00283,U0009,B0021,2,An engaging read but the ending felt rushed.,2021-09-18 00:00:00,True
+R00284,U0181,B0061,5,,2022-03-25 00:00:00,False
+R00285,U0195,B0031,5,One of the best books I have read this year.,2021-01-02 00:00:00,False
+R00286,U0105,B0054,2,Highly recommend to anyone who enjoys this genre.,2020-10-10 00:00:00,True
+R00287,U0021,B0057,4,,2024-09-11 00:00:00,False
+R00288,U0049,B0042,5,A masterpiece of modern literature.,2021-01-07 00:00:00,True
+R00289,U0171,B0074,3,Highly recommend to anyone who enjoys this genre.,2023-07-15 00:00:00,True
+R00290,U0181,B0037,3,One of the best books I have read this year.,2021-09-05 00:00:00,True
+R00291,U0142,B0025,4,,2020-11-24 00:00:00,False
+R00292,U0027,B0027,5,"Absolutely loved this book, could not put it down.",2020-08-08 00:00:00,True
+R00293,U0111,B0073,5,Decent story but nothing groundbreaking.,2023-06-25 00:00:00,True
+R00294,U0194,B0068,3,The writing style is beautiful but the plot drags.,2023-03-14 00:00:00,True
+R00295,U0128,B0065,4,The characters felt real and relatable.,2022-05-23 00:00:00,False
+R00296,U0019,B0057,4,An engaging read but the ending felt rushed.,2022-10-24 00:00:00,True
+R00297,U0036,B0067,2,Not my cup of tea but well written.,2022-02-01 00:00:00,True
+R00298,U0161,B0070,1,Highly recommend to anyone who enjoys this genre.,2022-04-09 00:00:00,False
+R00299,U0069,B0050,4,One of the best books I have read this year.,2024-05-11 00:00:00,False
+R00300,U0022,B0069,3,The characters felt real and relatable.,2023-08-23 00:00:00,False
