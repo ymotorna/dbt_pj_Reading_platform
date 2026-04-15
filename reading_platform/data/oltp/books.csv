@@ -1,0 +1,81 @@
+book_id,author_id,title,genre_id,genre,language_code,language,published_date,page_count,added_to_platform_at,is_available
+BOOK001,AUTH030,The Lost Garden,GEN01,Fiction,fr,fr,1996-12-23,432,2021-06-11,True
+BOOK002,AUTH029,Echoes of Tomorrow,GEN01,Fiction,de,de,2018-08-27,445,2023-01-11,True
+BOOK003,AUTH022,The Silent River,GEN01,Fiction,en,en,1990-03-22,190,2022-08-16,True
+BOOK004,AUTH013,Between Worlds,GEN01,Fiction,it,it,1992-06-20,475,2023-07-18,True
+BOOK005,AUTH012,The Last Summer,GEN01,Fiction,en,en,1989-05-25,509,2022-07-01,True
+BOOK006,AUTH020,Ordinary Days,GEN01,Fiction,de,de,2008-06-25,423,2021-12-17,True
+BOOK007,AUTH013,The Blue Hour,GEN01,Fiction,en,en,1992-02-09,262,2024-02-15,True
+BOOK008,AUTH025,Paper Wings,GEN01,Fiction,it,it,1982-07-05,570,2022-04-15,False
+BOOK009,AUTH009,Understanding Markets,GEN02,Non-Fiction,en,en,1982-12-20,440,2022-03-09,True
+BOOK010,AUTH021,The Modern Mind,GEN02,Non-Fiction,en,en,2002-05-24,479,2023-03-22,True
+BOOK011,AUTH008,Truth Unveiled,GEN02,Non-Fiction,en,en,2013-06-01,425,2024-02-24,True
+BOOK012,AUTH029,Real Stories,GEN02,Non-Fiction,de,de,2006-03-05,335,2023-03-29,True
+BOOK013,AUTH017,The Age of Data,GEN02,Non-Fiction,ru,ru,2002-02-19,536,2021-07-06,False
+BOOK014,AUTH021,Fact by Fact,GEN02,Non-Fiction,en,en,1987-03-06,455,2023-05-15,True
+BOOK015,AUTH015,Clear Thinking,GEN02,Non-Fiction,en,en,2003-09-26,433,2022-05-30,True
+BOOK016,AUTH024,Rational World,GEN02,Non-Fiction,en,en,1985-02-19,534,2024-01-05,True
+BOOK017,AUTH004,The Hidden Clue,GEN03,Mystery,de,de,1993-03-01,230,2023-06-10,True
+BOOK018,AUTH029,Death at Dusk,GEN03,Mystery,pt,pt,2012-04-13,406,2022-06-24,True
+BOOK019,AUTH004,The Vanishing,GEN03,Mystery,fr,fr,2019-01-18,580,2022-09-04,True
+BOOK020,AUTH005,Cold Trail,GEN03,Mystery,de,de,1996-10-09,426,2021-11-27,True
+BOOK021,AUTH030,The Secret Room,GEN03,Mystery,pt,pt,1980-01-10,315,2024-05-11,True
+BOOK022,AUTH012,Final Evidence,GEN03,Mystery,en,en,2019-06-01,272,2022-09-22,True
+BOOK023,AUTH003,Midnight Case,GEN03,Mystery,it,it,1983-11-04,567,2023-09-23,True
+BOOK024,AUTH025,The Witness,GEN03,Mystery,es,es,1985-08-22,487,2021-09-20,True
+BOOK025,AUTH009,Beyond the Stars,GEN04,Science Fiction,fr,fr,2003-09-02,366,2024-05-27,True
+BOOK026,AUTH025,The AI Uprising,GEN04,Science Fiction,pt,pt,2012-09-28,515,2022-02-16,True
+BOOK027,AUTH021,Quantum Dreams,GEN04,Science Fiction,ru,ru,1996-10-01,414,2023-06-17,True
+BOOK028,AUTH003,Future Earth,GEN04,Science Fiction,en,en,1995-03-02,451,2021-02-13,True
+BOOK029,AUTH001,The Robot Wars,GEN04,Science Fiction,de,de,1983-03-09,267,2021-05-01,True
+BOOK030,AUTH011,Solar Wind,GEN04,Science Fiction,en,en,1983-03-06,271,2023-11-19,True
+BOOK031,AUTH018,Deep Signal,GEN04,Science Fiction,fr,fr,1985-12-07,445,2024-03-15,True
+BOOK032,AUTH026,Parallel Code,GEN04,Science Fiction,es,es,1998-04-05,198,2022-01-25,True
+BOOK033,AUTH014,Dragon's Keep,GEN05,Fantasy,fr,fr,1998-06-10,592,2023-08-15,True
+BOOK034,AUTH021,The Enchanted Forest,GEN05,Fantasy,es,es,1984-05-31,356,2021-05-05,True
+BOOK035,AUTH004,Realm of Magic,GEN05,Fantasy,it,it,1991-02-25,247,2022-01-28,True
+BOOK036,AUTH006,The Wizard's Return,GEN05,Fantasy,en,en,1992-06-29,277,2023-08-06,True
+BOOK037,AUTH026,Shadow Kingdom,GEN05,Fantasy,en,en,2018-08-21,200,2024-02-02,True
+BOOK038,AUTH027,Iron Throne,GEN05,Fantasy,ru,ru,1980-08-29,535,2021-07-11,True
+BOOK039,AUTH016,The Oracle,GEN05,Fantasy,en,en,2001-08-04,592,2022-03-14,True
+BOOK040,AUTH013,Fated Crown,GEN05,Fantasy,en,en,1980-02-05,285,2023-03-11,True
+BOOK041,AUTH010,A Life Remembered,GEN06,Biography,es,es,1998-12-22,488,2024-02-13,True
+BOOK042,AUTH010,The Journey Within,GEN06,Biography,en,en,1989-10-06,446,2021-04-30,True
+BOOK043,AUTH011,My Story,GEN06,Biography,en,en,1982-07-25,449,2021-04-13,True
+BOOK044,AUTH017,Memoirs of a Legend,GEN06,Biography,pt,pt,1987-01-23,410,2021-04-27,True
+BOOK045,AUTH020,Portrait of a Life,GEN06,Biography,en,en,1983-01-18,356,2022-04-27,True
+BOOK046,AUTH008,Living Proof,GEN06,Biography,pt,pt,2005-12-20,170,2024-05-02,True
+BOOK047,AUTH019,The Long Road,GEN06,Biography,en,en,2005-05-09,311,2023-12-07,True
+BOOK048,AUTH023,First Person,GEN06,Biography,en,en,1994-02-03,285,2022-05-04,True
+BOOK049,AUTH010,Ancient Empires,GEN07,History,es,es,2000-07-05,534,2022-10-10,True
+BOOK050,AUTH020,The War Chronicles,GEN07,History,en,en,2005-04-03,187,2021-07-24,True
+BOOK051,AUTH005,Rise and Fall,GEN07,History,fr,fr,2021-11-11,185,2022-12-16,True
+BOOK052,AUTH006,The Lost Civilization,GEN07,History,en,en,1999-08-28,510,2024-01-18,True
+BOOK053,AUTH026,History Decoded,GEN07,History,ru,ru,2009-05-02,154,2023-12-20,True
+BOOK054,AUTH030,The Dark Century,GEN07,History,fr,fr,2009-10-03,599,2021-08-01,True
+BOOK055,AUTH004,Forgotten Kings,GEN07,History,en,en,2013-04-20,229,2024-02-08,True
+BOOK056,AUTH023,The Long War,GEN07,History,de,de,1995-05-19,501,2022-02-21,True
+BOOK057,AUTH016,Forever Yours,GEN08,Romance,en,en,1991-04-07,197,2021-04-15,True
+BOOK058,AUTH002,The Heart's Desire,GEN08,Romance,it,it,1980-02-28,544,2022-11-15,True
+BOOK059,AUTH006,Love in Paris,GEN08,Romance,ru,ru,2013-04-01,432,2023-06-24,True
+BOOK060,AUTH004,A Second Chance,GEN08,Romance,de,de,1983-05-17,429,2021-11-02,False
+BOOK061,AUTH018,The Perfect Match,GEN08,Romance,en,en,1986-08-23,215,2023-05-31,False
+BOOK062,AUTH030,Summer Promise,GEN08,Romance,en,en,2015-09-17,333,2021-03-23,True
+BOOK063,AUTH004,Last Dance,GEN08,Romance,en,en,1995-11-12,597,2024-02-21,True
+BOOK064,AUTH005,Written in Stars,GEN08,Romance,de,de,2021-07-11,592,2022-04-30,True
+BOOK065,AUTH006,The Final Hour,GEN09,Thriller,es,es,2019-07-16,162,2023-04-25,True
+BOOK066,AUTH026,No Way Out,GEN09,Thriller,pt,pt,2021-10-02,560,2023-04-24,True
+BOOK067,AUTH008,The Chase,GEN09,Thriller,es,es,1991-12-20,553,2021-11-23,True
+BOOK068,AUTH002,Deadly Game,GEN09,Thriller,en,en,2018-07-07,263,2023-08-22,True
+BOOK069,AUTH012,Edge of Fear,GEN09,Thriller,pt,pt,1993-09-09,264,2022-04-12,False
+BOOK070,AUTH011,Dark Pursuit,GEN09,Thriller,en,en,1992-06-30,545,2021-05-23,True
+BOOK071,AUTH013,Kill Switch,GEN09,Thriller,de,de,2010-06-25,319,2024-01-04,True
+BOOK072,AUTH009,The Handler,GEN09,Thriller,en,en,1988-01-04,285,2024-04-04,False
+BOOK073,AUTH012,The Power Within,GEN10,Self-Help,de,de,2012-09-05,373,2022-10-05,True
+BOOK074,AUTH013,Better Every Day,GEN10,Self-Help,fr,fr,2020-05-07,247,2024-03-26,True
+BOOK075,AUTH001,Mind Mastery,GEN10,Self-Help,es,es,2003-04-28,501,2024-01-08,True
+BOOK076,AUTH022,The Success Formula,GEN10,Self-Help,es,es,1988-11-02,370,2023-01-16,True
+BOOK077,AUTH011,Unlock Your Potential,GEN10,Self-Help,es,es,2007-12-14,489,2022-10-05,True
+BOOK078,AUTH010,Habit Loop,GEN10,Self-Help,es,es,2002-09-30,491,2022-09-26,True
+BOOK079,AUTH010,Deep Focus,GEN10,Self-Help,en,en,2004-11-13,248,2021-09-18,True
+BOOK080,AUTH022,Own Your Morning,GEN10,Self-Help,pt,pt,2013-07-23,465,2021-12-23,True

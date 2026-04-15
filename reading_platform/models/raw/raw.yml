@@ -1,8 +1,8 @@
 # add data_tests for vals:
-  # primary key uniqueness
-  # not null constraints
-  # accepted values
-  # relationships between tables
+  # PK uniqueness
+  # not null
+  # accepted vals
+  # relationships bw  tbls
 
 version: 2
 
